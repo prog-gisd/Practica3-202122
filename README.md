@@ -101,10 +101,10 @@ Vamos a empezar por crear una clase simple para las habilidades. Por ahora, sól
 ```python
 class Habilidad:
   
-  def invocar(self) -> void:
+  def invocar(self):
     print('Se ha invocado una habilidad que no hace nada')
   
-  def ayuda(self) -> void:
+  def ayuda(self):
     print('No hay ayuda especı́fica')
 ```
 En este punto, podemos crear varias habilidades, pero no sirve para mucho porque todas las instancias hacen exactamente lo mismo. El resultado es igual que tener una función, pero con engorrosos pasos adicionales:
@@ -126,7 +126,7 @@ Si no se proporciona una descripción al crear una instancia, se reutilizará po
 class Habilidad:
   '''Abstracción del concepto de habilidad en un asistente.'''
 
-  def __init__(self, nombre, descripcion=None):
+  def __init__(self, nombre: str, descripcion:str =None):
     self.nombre = nombre
     self.descripcion = descripcion or self.__doc__
 
