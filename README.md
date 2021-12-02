@@ -254,12 +254,12 @@ class Menu:
   '''Menú interactivo de gestión de habilidades.'''
   
   def __init__(self, habilidades):
-    # habilidades es una LISTA
+    # habilidades es una LISTA de objetos de tipo habilidad
     # self.habilidades es un diccionario de nombre -> habilidad
     self.habilidades = {}
     raise NotImplementedError
   
-  def ayuda(self, habilidad=None):
+  def ayuda(self, comando=None):
     '''
     Muestra ayuda del uso del menú. Si no se especifica una habilidad,
     se muestra la ayuda general. Esta ayuda general muestra la lista
